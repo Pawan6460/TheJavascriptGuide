@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+// About execution context:
+// An Execution Context (EC) is an environment in which JavaScript code is executed. Every time a function runs
+// or the script starts, JavaScript creates an execution context that determines 
+// how the code is interpreted and executed.
+
+
+// There are three main types of execution contexts in JavaScript:
+// Global Execution Context (GEC) – The default execution context that is created when a JavaScript file runs. 
+// It contains global variables and functions.
+
+// Function Execution Context (FEC) – Created when a function is invoked, containing its own variables and scope.
+
+// Eval Execution Context – Created when the eval() function is used (rarely recommended).
+function first() {
+    console.log("First function");
+    second();
+  }
+  
+  function second() {
+      //second() is called → new Execution Context is pushed.
+    console.log("Second function");
+    third();
+  }
+  
+  function third() {
+  //third() is called → new Execution Context is pushed.
+  console.log("Third function");
+  }
+  
+  first(); //Global Execution Context is created → first() is called.
+  //A new Function Execution Context for first() is pushed onto the stack.
+
+  //third() completes → Execution Context is removed (popped).
+  //second() completes → Execution Context is removed.
+  //first() completes → Execution Context is removed
+  //Global Execution Context is removed → Program Ends. 
+
+//EXECUTION CONTEXT WORKS IN LAST IN FIRST OUT PRINCIPLE
+
+//1. Creation Phase (Memory Allocation)
+//A Global Execution Context (GEC) is created.
+//The this keyword is assigned (in browsers, this refers to window).
+//Variables (var) and function declarations are stored in memory (MEMORY ALLOCATION PHASE) (hoisting).
+
+//2. Execution Phase (Code Execution)
+//The code runs line by line.
+//Variables are assigned values.
+//Function calls create new Function Execution Contexts (FECs)
+</script>
+</html>

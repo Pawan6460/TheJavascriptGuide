@@ -10,6 +10,9 @@ JavaScript is one of the most in-demand programming languages, powering both fro
 ✅ Cover modern JavaScript features (ES6+), performance optimizations, and best practices.
 ✅ Help with interview preparation by providing commonly asked questions.
 
+Note: ALL THE IMPORTANT POINTERS ARE WRITTEN WITHIN SCRIPT TAG FOR EASY UNDERSTANDING ALONG WITH
+CODE TRIALS WHICH WILL BE MAJORLY IN THE SCRIPT TAG AS THE GUIDE IS FOR JS RELATED THINGS ONLY.
+
 Who is This For?
 Beginners: Learn JavaScript in a structured manner with clear explanations.
 Intermediate Developers: Deepen your understanding of closures, event loops, and async programming.

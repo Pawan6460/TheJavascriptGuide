@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // What is a Closure?
+// A closure is a function that remembers its outer scope even after the outer function 
+// has finished execution.
+
+// Why are Closures Important?
+// Encapsulation – Protects variables from being modified externally.
+// Data Privacy – Helps in creating private variables in JavaScript.
+// Function Factories – Helps generate multiple customized functions dynamically.
+// Async Code Handling – Useful in callbacks, event listeners, and timers.
+
+//EXAMPLE 1
+ function outerFunction() {
+    let outerVar = "I am from outer!";
+  
+    function innerFunction() {
+      console.log(outerVar); // ✅ Can access outerVar
+    }
+  
+    return innerFunction; // Returning the inner function
+  }
+  
+  const closureExample = outerFunction(); 
+  closureExample(); // "I am from outer!"
+
+  // Closures help in creating private variables that cannot be modified from outside.
+  function counter() {
+    let count = 0; // Private variable
+  
+    return {
+      increment: function () {
+        count++;
+        console.log("Count:", count);
+      },
+      decrement: function () {
+        count--;
+        console.log("Count:", count);
+      }
+    };
+  }
+
+const myCounter = counter();
+myCounter.increment(); // Count: 1
+myCounter.increment(); // Count: 2
+myCounter.decrement(); // Count: 1
+console.log(myCounter.count); // ❌ Undefined (count is private)
+
+
+// EXAMPLE 2
+function greetingGenerator(greeting) {
+    return function (name) {
+      console.log(`${greeting}, ${name}!`);
+    };
+  }
+  
+  const sayHello = greetingGenerator("Hello");
+  const sayGoodbye = greetingGenerator("Goodbye");
+  
+  sayHello("Alice");   // "Hello, Alice!"
+  sayHello("Bob");     // "Hello, Bob!"
+  sayGoodbye("Alice"); // "Goodbye, Alice!"
+
+//📌 Key Takeaway:
+
+//sayHello remembers "Hello", and sayGoodbye remembers "Goodbye".
+// The greeting argument is preserved using closures.
+</script>
+</html>

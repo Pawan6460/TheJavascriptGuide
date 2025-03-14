@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // The Call Stack is a data structure that JavaScript uses to manage function execution. It follows the LIFO (Last In, First Out) principle, 
+    // meaning the last function called is the first to complete
+
+   // Whenever a function is called:
+//1️⃣ A new Execution Context is created and pushed onto the Call Stack.
+//2️⃣ The function executes.
+//3️⃣ Once execution is complete, the Execution Context is popped from the stack.
+//4️⃣ JavaScript moves back to the previous function in the stack.
+
+function greet() {
+    console.log("Hello!");
+  }
+  
+  function sayGoodbye() {
+    console.log("Goodbye!");
+  }
+  
+  greet();
+  sayGoodbye();
+  console.log("End of script");
+
+ // If a function calls itself indefinitely,
+ // the call stack keeps growing until JavaScript throws a stack overflow
+ function infiniteRecursion() {
+    infiniteRecursion();
+  }
+  
+  infiniteRecursion();
+  
+</script>
+</html>

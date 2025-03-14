@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //Scope determines where variables and functions can be accessed in your code.
+
+   // Types of Scope in JavaScript:
+//1️⃣ Global Scope – Variables declared outside any function are globally accessible.
+//2️⃣ Function (Local) Scope – Variables declared inside a function exist only within that function.
+//3️⃣ Block Scope (ES6) – let and const variables are restricted to the block {} in which they are declared.
+//4️⃣ Lexical Scope (Closures) – A function can access variables defined in its outer scope.
+
+//IMP
+//Note: var does NOT have block scope. It ignores {} and leaks outside.
+{
+    var leakedVar = "I'm NOT block-scoped!";
+  }
+  
+console.log(leakedVar);
+
+// with var are hoisted, but only their declaration, not initialization.
+// does not assign 10 until execution.
+console.log(a); // ❌ Undefined (Not ReferenceError)
+var a = 10;
+console.log(a); // ✅ 10
+
+// Variables declared with let and const are hoisted but not initialized. 
+//Accessing them before declaration throws a ReferenceError.
+</script>
+</html>
