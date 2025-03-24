@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+// First-Class Functions: In JavaScript, functions are treated as values, meaning they can be:
+//✅ Assigned to variables
+//✅ Passed as arguments
+//✅ Returned from other functions
+
+function operate(a, b, operation) {
+    return operation(a, b);
+}
+  
+const add = (x, y) => x + y;
+  
+console.log(operate(5, 3, add));
+// ✔ add is passed as an argument and executed inside operate.
+
+
+//  Definition: A function that executes immediately after declaration. IIFE
+(function () {
+    console.log("I am an IIFE!");
+  })(); // "I am an IIFE!"
+
+//  ✔ Used for encapsulation to avoid polluting the global scope.
+</script>
+</html>
