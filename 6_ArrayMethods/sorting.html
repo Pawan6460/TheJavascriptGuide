@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+const numbers = [5, 2, 9, 1, 7];
+numbers.sort(); //  Default sorting is not numerical
+console.log(numbers); // [1, 2, 5, 7, 9] Works correctly
+
+const values = [50, 10, 400, 2];
+values.sort(); // Incorrect sorting due to string conversion
+console.log(values); // [10, 2, 400, 50]
+
+values.sort((a, b) => a - b); // Correct numerical sorting
+console.log(values); // [2, 10, 50, 400]
+</script>
+</html>

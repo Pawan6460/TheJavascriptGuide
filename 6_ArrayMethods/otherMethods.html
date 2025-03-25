@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+const numbers = [5, 10, 15, 20, 25];
+const foundNumber = numbers.find(num => num > 10);
+
+console.log(foundNumber); // 15
+
+// Returns the first element that satisfies a condition.
+
+const numbersOth = [3, 5, 8, 12];
+const hasEvenNumber = numbersOth.some(num => num % 2 === 0);
+console.log(hasEvenNumber); // true (because 8 & 12 are even)
+//.some() – Checks if at least one element satisfies a condition.
+
+const allEven = numbersOth.every(num => num % 2 === 0);
+console.log(allEven);//false (because 3 & 5 are odd)
+// .every() – Checks if all elements satisfy a condition.
+
+const colors = ["red", "blue", "green"];
+console.log(colors.includes("blue")); // true
+console.log(colors.includes("yellow")); // false
+// Returns true if an array contains a specific value.
+</script>
+</html>

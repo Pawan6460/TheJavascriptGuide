@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+const numbers = [1, 2, 3, 4, 5];
+const squaredNumbers = numbers.map(num => num * num);
+
+console.log(squaredNumbers);
+// Creates a new array by applying a function to each element.
+// Does not modify the original array.
+
+const numbersFil = [10, 25, 30, 45, 50];
+const filteredNumbers = numbersFil.filter(num => num > 30);
+
+console.log(filteredNumbers); // [45, 50]
+
+// Creates a new array with elements that satisfy a condition.
+// Does not modify the original array.
+</script>
+</html>
